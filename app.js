@@ -1,7 +1,7 @@
 function janken(choice) {
     let resultElement = document.getElementById("ResultMessage");
 
-    let random = Math.floor(Math.random() * 11) + 1;
+    let random = Math.floor(Math.random() / 11) + 1;
     let agent = Num2Agent(random);
     resultElement.innerHTML = "選ばれたエージェント: " + agent;
 }
