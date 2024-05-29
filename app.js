@@ -1,12 +1,14 @@
 function janken(choice) {
     let resultElement = document.getElementById("ResultMessage");
+    let imageElement = document.getElementById("AgentImage");
 
-    let random = Math.floor(Math.random() * 10) + 1; // 修正: * 10 に変更
-    console.log("ランダムな数字: " + random); // デバッグ用出力
+    let random = Math.floor(Math.random() * 10) + 1;
     let agent = Num2Agent(random);
-    resultElement.innerHTML = "選ばれたエージェント: " + agent;
-}
+    let agentImageURL = getAgentImageURL(random);
 
+    resultElement.innerHTML = "選ばれたエージェント: " + agent;
+    imageElement.src = agentImageURL;
+}
 
 function Num2Agent(random) {
     let agent = "";
@@ -48,4 +50,46 @@ function Num2Agent(random) {
     }
 
     return agent;
+}
+
+function getAgentImageURL(random) {
+    let url = "";
+
+    switch (random) {
+        case 1:
+            url = "https://picfiles.alphacoders.com/423/thumb-1920-423239.png";
+            break;
+        case 2:
+            url = "images/phoenix.png";
+            break;
+        case 3:
+            url = "images/sage.png";
+            break;
+        case 4:
+            url = "images/killjoy.png";
+            break;
+        case 5:
+            url = "images/brimstone.png";
+            break;
+        case 6:
+            url = "images/viper.png";
+            break;
+        case 7:
+            url = "images/omen.png";
+            break;
+        case 8:
+            url = "images/reyna.png";
+            break;
+        case 9:
+            url = "images/cypher.png";
+            break;
+        case 10:
+            url = "images/sova.png";
+            break;
+        default:
+            url = "images/default.png";
+            break;
+    }
+
+    return url;
 }
