@@ -1,5 +1,4 @@
 function janken(choice, number) {
-    let resultElement = document.getElementById("ResultMessage");
     let resultContainer = document.getElementById("result");
     resultContainer.innerHTML = ""; // 結果をリセット
 
@@ -8,7 +7,7 @@ function janken(choice, number) {
         let agent = Num2Agent(random);
 
         let resultMessage = document.createElement("p");
-        resultMessage.textContent = "選ばれたエージェントf: " + agent;
+        resultMessage.textContent = "選ばれたエージェントあ: " + agent;
         resultContainer.appendChild(resultMessage);
     }    
 }
