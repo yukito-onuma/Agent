@@ -5,67 +5,104 @@ function janken(choice) {
     PlayersChoiceElement.innerHTML = Num2Synbol(choice);
 
     let PCsChoiceElemennt = document.getElementById("PCsChoice");
-    let PCsChoiceNumber = Math.floor(Math.random() * 3) + 1;
+    let PCsChoiceNumber = Math.floor(Math.random() * 11) + 1;
 
     PCsChoiceElemennt.innerHTML = Num2Synbol(PCsChoiceNumber);
 
-    resultElement.innerHTML = Judgement(choice, PCsChoiceNumber);
+    resultElement.innerHTML = Judgement(choice);
 }
 
-function Num2Synbol(choice)
-{
-    let symbol = "";
+function Num2Agent(choice) {
+    let agent = "";
 
     switch (choice) {
         case 1:
-            symbol = "✊🏻";
+            agent = "ジェット";
             break;
 
         case 2:
-            symbol = "✌🏻";
+            agent = "フェニックス";
+            break;
+
+        case 3:
+            agent = "セージ";
+            break;
+
+        case 4:
+            agent = "キルジョイ";
+            break;
+
+        case 5:
+            agent = "ブリムストーン";
+            break;
+
+        case 6:
+            agent = "ヴァイパー";
+            break;
+
+        case 7:
+            agent = "オーメン";
+            break;
+
+        case 8:
+            agent = "レイナ";
+            break;
+
+        case 9:
+            agent = "サイファー";
+            break;
+
+        case 10:
+            agent = "ソーヴァ";
             break;
 
         default:
-            symbol = "🖐🏻";
+            agent = "不明なエージェント";
             break;
     }
 
-    return symbol;
+    return agent;
 }
 
-function Judgement(PlayersChoice, PCsChoice)
-{
-    let resultMsg = "";
-    let constPlayerWin = "プレイヤーの勝ち";
-    let constPCWin = "コンピューターの勝ち";
-    let constDraw = "あいこ";
 
-    if (PlayersChoice == PCsChoice) {
-        resultMsg = constDraw;
-    }else{
-        if(PlayersChoice == 1){ // Gu
-            if (PCsChoice == 2){ // Choki
-                resultMsg = constPlayerWin;
-            }else {
-                resultMsg = constPCWin;
-            }
-        }else{
-            if(PlayersChoice == 2) { // Choki
-                if (PCsChoice == 1) { // Gu
-                    resultMsg = constPCWin;
-                }else { // Pa
-                    resultMsg = constPlayerWin
-                }
-            }else{//Pa
-                if(PCsChoice == 1) {//Gu
-                    resultMsg = constPlayerWin;
-                }else{
-                    resultMsg = constPCWin;
-                }
-            }
-        }
+function Judgement(choice) {
+    let agent = "";
+
+    switch (choice) {
+        case 1:
+            agent = "ジェット";
+            break;
+        case 2:
+            agent = "フェニックス";
+            break;
+        case 3:
+            agent = "セージ";
+            break;
+        case 4:
+            agent = "キルジョイ";
+            break;
+        case 5:
+            agent = "ブリムストーン";
+            break;
+        case 6:
+            agent = "ヴァイパー";
+            break;
+        case 7:
+            agent = "オーメン";
+            break;
+        case 8:
+            agent = "レイナ";
+            break;
+        case 9:
+            agent = "サイファー";
+            break;
+        case 10:
+            agent = "ソーヴァ";
+            break;
+        default:
+            agent = "不明なエージェント";
+            break;
     }
 
-    return resultMsg;
-
+    return agent;
 }
