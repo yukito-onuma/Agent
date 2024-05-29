@@ -8,7 +8,7 @@ function janken(choice, number) {
         let agent = Num2Agent(random);
 
         let resultMessage = document.createElement("p");
-        resultMessage.textContent = "選ばれたエージェント: " + agent;
+        resultMessage.textContent = "選ばれたエージェントf: " + agent;
         resultContainer.appendChild(resultMessage);
     }    
 }
