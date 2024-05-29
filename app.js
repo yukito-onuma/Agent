@@ -1,4 +1,4 @@
-function janken(choice) {
+function janken(choice, number) {
     let resultElement = document.getElementById("ResultMessage");
     let imageElement = document.getElementById("AgentImage");
 
@@ -6,8 +6,11 @@ function janken(choice) {
     let agent = Num2Agent(random);
     let agentImageURL = getAgentImageURL(random);
 
-    resultElement.innerHTML = "選ばれたエージェント: " + agent;
-    imageElement.src = agentImageURL;
+    for (let i = 0; i < number; i++) 
+    {
+        resultElement.innerHTML = "選ばれたエージェント: " + agent;
+        imageElement.src = agentImageURL;
+    }    
 }
 
 function Num2Agent(random) {
