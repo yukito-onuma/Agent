@@ -6,10 +6,10 @@ function janken(choice) {
     resultElement.innerHTML = "選ばれたエージェント: " + agent;
 }
 
-function Num2Agent(choice) {
+function Num2Agent(random) {
     let agent = "";
 
-    switch (choice) {
+    switch (random) {
         case 1:
             agent = "ジェット";
             break;
