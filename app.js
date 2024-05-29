@@ -57,7 +57,7 @@ function getAgentImageURL(random) {
 
     switch (random) {
         case 1:
-            url = "https://picfiles.alphacoders.com/423/thumb-1920-423239.png";
+            url = "jett.png";
             break;
         case 2:
             url = "images/phoenix.png";
